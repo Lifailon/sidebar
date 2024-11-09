@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Custom Sidebar",
+  "version": "0.1.0",
+  "author": "Lifailon",
+  "homepage_url": "https://github.com/Lifailon/sidebar",
+  "description": "Customizable browser sidebar for quick access to sites",
+  "permissions": [
+    "sidePanel",
+    "declarativeNetRequest",
+    "clipboardWrite",
+    "storage"
+  ],
+  "icons": {
+    "512": "icons/icon512.png",
+    "256": "icons/icon256.png",
+    "128": "icons/icon128.png",
+    "64": "icons/icon64.png",
+    "32": "icons/icon32.png"
+  },
+  "host_permissions": ["<all_urls>"],
+  "side_panel": {
+    "default_path": "sidebar.html"
+  },
+  "web_accessible_resources": [
+    {
+      "matches": ["<all_urls>"],
+      "resources": ["sidebar.html"],
+      "use_dynamic_url": true
+    }
+  ],
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Q"
+      }
+    }
+  },
+  "options_page": "options.html"
+}
