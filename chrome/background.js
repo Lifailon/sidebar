@@ -20,3 +20,20 @@ chrome.runtime.onInstalled.addListener(() => {
         }]
     })
 })
+
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.storage.sync.get(['sidebarSites'], (result) => {
+        if (!result.sidebarSites || result.sidebarSites.length === 0) {
+            const defaultSites = [
+                { name: "ChatGPT", url: "https://chat.openai.com" },
+                { name: "Gemini", url: "https://gemini.google.com" },
+                { name: "Perplexity", url: "https://perplexity.ai" },
+                { name: "LangChain", url: "https://chat.langchain.com" },
+                { name: "You", url: "https://you.com" },
+                { name: "DeepL", url: "https://deepl.com" },
+                { name: "Reverso", url: "https://reverso.net" }
+            ]
+            chrome.storage.sync.set({ sidebarSites: defaultSites })
+        }
+    })
+})

@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Lifailon",
   "homepage_url": "https://github.com/Lifailon/sidebar",
-  "description": "Customizable browser sidebar for quick access to sites",
+  "description": "Customizable browser sidebar for quick access to websites",
   "permissions": [
     "sidePanel",
     "declarativeNetRequest",

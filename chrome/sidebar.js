@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    chrome.storage.sync.get(['sites'], (result) => {
-        const sites = result.sites || []
+    chrome.storage.sync.get(['sidebarSites'], (result) => {
+        const sites = result.sidebarSites || []
         renderSites(sites)
     })
 

@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const updatedSites = JSON.parse(jsonInput.value)
             if (Array.isArray(updatedSites) && updatedSites.every(site => site.name && site.url)) {
-                chrome.storage.sync.set({ sites: updatedSites }, () => {
+                chrome.storage.sync.set({ sidebarSites: updatedSites }, () => {
                     showNotification("Updated successfully", '#4caf50', 3000)                
                 })
             } else {
@@ -88,13 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "ChatGPT",          url: "https://chat.openai.com" },
             { name: "Gemini",           url: "https://gemini.google.com" },
             { name: "Perplexity",       url: "https://perplexity.ai" },
-            // { name: "Phind",         url: "https://www.phind.com" },
             { name: "LangChain",        url: "https://chat.langchain.com" },
             { name: "You",              url: "https://you.com" },
             { name: "DeepL",            url: "https://deepl.com" },
-            { name: "Reverso",          url: "https://reverso.net" },
-            // { name: "LanguageTool",  url: "https://languagetool.org" },
-            // { name: "Speller",       url: "https://yandex.ru/dev/speller" },
+            { name: "Reverso",          url: "https://reverso.net" }
         ]
         jsonInput.value = JSON.stringify(defaultSites, null, 2)
     })
@@ -114,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
     buttonsContainer.appendChild(updateButton)
     buttonsContainer.appendChild(restoreButton)
 
-    chrome.storage.sync.get(['sites'], (result) => {
-        let sites = result.sites || []
+    chrome.storage.sync.get(['sidebarSites'], (result) => {
+        let sites = result.sidebarSites || []
         jsonInput.value = JSON.stringify(sites, null, 2)
     })
 

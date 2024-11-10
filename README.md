@@ -4,13 +4,15 @@
 
 Customizable browser sidebar for quick access to websites.
 
+This extension is inspired by the [AI Side Panel](https://github.com/creosB/AI-Side-Panel-Extension#) project (the code is completely rewritten) without being tied to specific sites.
+
 The sidebar is available on any site and is saved when moving through tabs. To quickly open the sidebar, use the `Ctrl+Q` key combination or left click on the extension logo.
 
 The list of buttons is displayed dynamically and can be customized through the extension configuration in `JSON` format. To call the configuration interface, right-click on the extension logo and select `Options`.
 
 ![options](/image/options.jpg)
 
-### 🚀 Install
+### 🚀 Install in Google Chrome
 
 1. Download the extension from the [GitHub repository](https://github.com/Lifailon/sidebar/archive/refs/heads/main.zip) and extract the downloaded archive.
 
