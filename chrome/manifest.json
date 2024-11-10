@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Browser Custom Sidebar",
-  "version": "0.1.0",
+  "name": "Custom Sidebar",
+  "version": "1.0.0",
   "author": "Lifailon",
   "homepage_url": "https://github.com/Lifailon/sidebar",
   "description": "Customizable browser sidebar for quick access to sites",
